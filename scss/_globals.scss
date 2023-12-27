@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+}
+
+body {
+      color: #fafafa;
+      background-color: $primary-color;
+}
+
+.container {
+      width: 100%;
+      max-width: $maxScreen;
+      margin: 0 auto;
+
+      @media (max-width: $maxScreen) {
+            padding: 0 0.5rem;
+      }
+}
+
+section {
+      padding: 2rem 0;
+      min-height: 100vh;
+}
+
+a {
+      color: #fafafa;
+      text-decoration: none;
+}
+
+.primary_btn {
+      display: inline-block;
+      padding: 10px 2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      border: 2px solid $accent-color;
+      background-color: $accent-color;
+      color: $primary-color !important;
+      transition: ease 0.4s;
+
+      &:hover {
+            background-color: $primary-color;
+            color: $accent-color !important;
+      }
+}
+
+.logo {
+      font-weight: 500;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: ease 0.4s;
+
+      span {
+            color: $accent-color;
+      }
+
+      &:hover {
+            color: $accent-color;
+      }
+}
+
+.heading {
+      font-weight: 500;
+      margin: 1.6rem 0;
+      font-size: clamp(1.45rem, 3vw, 3.4rem);
+
+      span {
+            color: $accent-color;
+      }
+}
+
+.text {
+      font-size: 0.9rem;
+      color: #bfbfbf;
+      line-height: 23px;
+      font-weight: normal;
+      margin-bottom: 1.6rem;
+}
+
+
+header .container {
+      position: relative;
+}
+
+// Navbar Desktop Design
+header .navigation{
+      margin: 1rem 0;
+      z-index: 1000;
+
+      .desktop_navigation, .mobile_navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0.85rem 1.2rem;
+            background-color: $secondary-color;
+            border-radius: 60px;
+            border: $border;
+
+            .logo_container {
+                  display: flex;
+                  align-items: center;
+
+                  img {
+                        width: 45px;
+                        margin-right: 5px;
+                  }
+            }
+
+            .nav_links {
+
+                  a{
+                        display: inline-block;
+                        margin: 0 1rem;
+                        transition: ease 0.4s;
+                        position: relative;
+                        padding-bottom: 5px;
+                        margin-top: 10px;
+                        overflow: hidden;
+
+                        &:hover {
+                              color: $accent-color;
+                        }
+
+                        &:hover::after {
+                              left: 0%;
+                        }
+                  }
+
+                  a::after {
+                        content: '';
+                        border-radius: 5px;
+                        position: absolute;
+                        top: 90%;
+                        left: -100%;
+                        width: 74%;
+                        height: 2px;
+                        transition: inherit;
+                        background-color: $accent-color;
+                  }
+
+                  .active {
+                        color: $accent-color;
+
+                        &::after{
+                              left: 0% !important;
+                        }
+                  }
+            }
+
+            .nav_btn_container {
+                  a:nth-child(1) {
+                        margin-right: 10px;
+                        transition: ease 0.4s;
+
+                        &:hover {
+                              color: $accent-color;
+                        }
+                  }
+            }
+      }
+
+      .mobile_navigation {
+            display: none;
+      }
+
+      @media (max-width:800px) {
+            .desktop_navigation {
+                  .nav_links {
+                        a {
+                              margin-left: 8px;
+                              margin-right: 8px;
+                              font-size: 0.95rem;
+                        }
+                  }
+            }
+      }
+
+      @media (max-width:700px) {
+            .desktop_navigation {
+                  display: none;
+            }
+
+            .mobile_navigation {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+
+                  .logo_container {
+                        img {
+                              width: 30px;
+                        }
+
+                        .logo {
+                              font-size: 1.2rem;
+                        }
+                  }
+
+                  .menu_container {
+                        span {
+                              font-size: 1.6rem;
+                              transform: scaleX(-1);
+                              color: $primary-color;
+                              background-color: $accent-color;
+                              padding: 4px 15px;
+                              border-radius: 30px;
+                              font-weight: 400;
+                              border: 2px solid $accent-color;
+                              transition: ease 0.4s;
+                              user-select: none;
+                        }
+                  }
+
+                  .menu_open {
+                        color: $accent-color !important;
+                        background-color: $secondary-color !important;
+                  }
+
+                  .open_mobile_nav {
+                        display: flex !important;
+                  }
+
+                  .mobile_nav_links {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 110%;
+                        left: 0;
+                        right: 0;
+                        background-color: $secondary-color;
+                        border: $border;
+                        padding: 1.5rem 1rem;
+                        text-align: center;
+                        border-radius: 20px;
+
+                        a:not(:last-child){
+                              transition: ease 0.4s;
+                              position: relative;
+                              padding-bottom: 5px;
+                              overflow: hidden;
+      
+                              &:hover {
+                                    color: $accent-color;
+                              }
+      
+                              &:hover::after {
+                                    left: 0%;
+                              }
+                        }
+      
+                        a::after {
+                              content: '';
+                              border-radius: 5px;
+                              position: absolute;
+                              top: 90%;
+                              left: -100%;
+                              width: 74%;
+                              height: 2px;
+                              transition: inherit;
+                              background-color: $accent-color;
+                        }
+      
+                        .active {
+                              color: $accent-color;
+      
+                              &::after{
+                                    left: 0% !important;
+                              }
+                        }
+
+                        a:not(:last-child) {
+                              width: fit-content;
+                              margin: 0 auto;
+                              margin-bottom: 1.6rem;
+                        }
+                  }
+            }
+      }
+}
+
+
+// Sticky Navbar Design
+.sticky {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: $maxScreen;
+      margin: 0 auto !important;
+
+      @media (max-width: $maxScreen) {
+            padding: 0 0.5rem;
+      }
+}
+
+.fixed {
+      position: fixed;
+}
+
+
+// Header Pattern Design
+header {
+      position: relative;
+
+      .pattern {
+            position: absolute;
+            top: 0%;
+            left: -3%;
+            z-index: -100;
+            
+            @media (max-width:800px) {
+                  width: 350px;
+
+                  img {
+                        width: 100%;
+                  }
+            }
+      }
+}
