@@ -24,7 +24,6 @@ body {
 
 section {
       padding: 2rem 0;
-      min-height: 100vh;
 }
 
 a {
@@ -322,4 +321,80 @@ header {
                   }
             }
       }
+}
+
+.heading_2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      span {
+            color: $accent-color;
+      }
+}
+
+
+// Section Heading
+.head_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width:700px) {
+            justify-content: center;
+            flex-direction: column;
+
+            text-align: center;
+      }
+
+      .left_container {
+            width: 100%;
+            max-width: 800px;
+      }
+
+      .right_container {
+            .tab_group {
+                  border: $border;
+                  border-radius: 50px;
+                  background-color: $secondary-color;
+                  padding: 10px 0.9rem;
+                  display: flex;
+                  align-items: center;
+                  text-wrap: nowrap;
+                  position: relative;
+
+                  button {
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        color: #fafafa;
+                        font-weight: 500;
+                        background-color: transparent;
+                        padding: 10px 2rem;
+                  }
+
+                  button:nth-child(2) {
+                        margin-left: 10px;
+                  }
+
+                  .activate {
+                        border-radius: 30px;
+                        background-color: $accent-color;
+                        color: $primary-color   ;
+                  }
+
+                  .inactive {
+                        
+                  }
+            }
+      }
+} 
+
+
+[data-tab-content] {
+      display: none;
+}
+
+.active_tab[data-tab-content] {
+      display: block;
 }

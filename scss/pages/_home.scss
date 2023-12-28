@@ -54,3 +54,88 @@ header .hero_container {
             }
       }
 }
+
+
+// Feature Section Design
+.features_section {
+
+      .tab_data {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+
+            @media (max-width:800px) {
+                  justify-content: center;
+
+                  .items {
+                        margin: 0;
+                        margin-bottom: 2rem !important;
+                  }
+            }
+
+            .items {
+                  width: 100%;
+                  max-width: 400px;
+                  text-align: center;
+
+                  .icon_container {
+                        position: relative;
+                        z-index: 1;
+                        width: 50px;
+                        height: 50px;
+                        margin: 1rem auto;
+                        border: 1px solid rgba(201, 255, 51, 0.1);
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, rgba(202, 255, 51, 0.10) -66.22%, rgba(202, 255, 51, 0.00) 85.46%);
+                        display: grid;
+                        place-items: center;
+
+                        span {
+                              color: $accent-color;
+                        }
+
+                        &::after {
+                              content: '';
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                              width: 70px;
+                              height: 70px;     
+                              z-index: -1;
+                              border-radius: 50%;
+                              background: linear-gradient(180deg, rgba(202, 255, 51, 0.20) -66.22%, rgba(202, 255, 51, 0.00) 85.46%);
+                        }
+                  }
+
+                  h4 {
+                        margin: 1.6rem 0 0.8rem 0;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                  }
+            }
+
+            .items:nth-child(1) {
+                  margin-right: 1rem;
+            }
+
+            .items:nth-child(2) {
+                  margin: 0 1rem;
+            }
+
+            .items:nth-child(3) {
+                  margin-left: 1rem;
+            }
+
+      }
+
+      @media (min-width:800px) {
+            margin-top: -4rem !important;
+      }
+
+      @media (max-width:800px) {
+            padding-top: 6rem !important;
+      }
+}

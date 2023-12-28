@@ -20,7 +20,29 @@ window.addEventListener('scroll', () => {
             stickyNavbar.classList.remove('fixed');
 });
 
+// Common Tab Layout Logic 
+const setUpTabs = (tabs, contents) => {
+      tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                  const element = document.querySelector(tab.dataset.tabTarget);
+                  contents.forEach(content => content.classList.remove("active_tab"));
+                  tabs.forEach(content => {
+                        content.classList.remove("activate");
+                        content.classList.add("inactive");
+                  });
+                  element.classList.add("active_tab");
+                  tab.classList.add("activate");
+                  tab.classList.remove("inactive");
+            });
+      });
+}
 
+
+// Tab Layout Logic
+const dataTabs = document.querySelectorAll("[data-tab-target]");
+const tabContent = document.querySelectorAll("[data-tab-content]");
+
+setUpTabs(dataTabs, tabContent);
 
 const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
