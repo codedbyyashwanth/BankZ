@@ -23,7 +23,7 @@ body {
 }
 
 section {
-      padding: 2rem 0;
+      padding: 5rem 0;
 }
 
 a {
@@ -44,6 +44,22 @@ a {
       &:hover {
             background-color: $primary-color;
             color: $accent-color !important;
+      }
+}
+
+.secondary_btn {
+      display: inline-block;
+      padding:  14px 1.2rem;
+      background-color: $secondary-color;
+      border: $border;
+      font-size: 0.9rem;
+      border-radius: 30px;
+      transition: ease 0.4s;
+
+      &:hover {
+            background-color: $accent-color;
+            color: $primary-color;
+            border-color: $accent-color;
       }
 }
 
@@ -349,7 +365,7 @@ header {
 
       .left_container {
             width: 100%;
-            max-width: 800px;
+            max-width: 1000px;
       }
 
       .right_container {
@@ -382,13 +398,10 @@ header {
                         background-color: $accent-color;
                         color: $primary-color   ;
                   }
-
-                  .inactive {
-                        
-                  }
             }
       }
 } 
+
 
 
 [data-tab-content] {
