@@ -21,10 +21,10 @@ window.addEventListener('scroll', () => {
 });
 
 // Common Tab Layout Logic 
-const setUpTabs = (tabs, contents) => {
+const setUpTabs = (tabs, contents, tabName) => {
       tabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                  const element = document.querySelector(tab.dataset.tabTarget);
+            tab.addEventListener('click', () => {
+                  const element = document.querySelector(tab.dataset[tabName]);
                   contents.forEach(content => content.classList.remove("active_tab"));
                   tabs.forEach(content => {
                         content.classList.remove("activate");
@@ -42,7 +42,13 @@ const setUpTabs = (tabs, contents) => {
 const dataTabs = document.querySelectorAll("[data-tab-target]");
 const tabContent = document.querySelectorAll("[data-tab-content]");
 
-setUpTabs(dataTabs, tabContent);
+setUpTabs(dataTabs, tabContent, "tabTarget");
+
+// Featured Layout Logic
+const featuredTabs = document.querySelectorAll("[data-featured-tab]");
+const featuredContent = document.querySelectorAll("[data-featured-content]");
+
+setUpTabs(featuredTabs, featuredContent, "featuredTab");
 
 const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

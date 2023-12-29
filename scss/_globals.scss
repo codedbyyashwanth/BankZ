@@ -411,3 +411,11 @@ header {
 .active_tab[data-tab-content] {
       display: block;
 }
+
+[data-featured-content] {
+      display: none !important;
+}
+
+.active_tab[data-featured-content] {
+      display: grid !important;
+}
