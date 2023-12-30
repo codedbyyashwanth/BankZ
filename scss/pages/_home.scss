@@ -599,3 +599,45 @@ header .hero_container {
             }
       }
 }
+
+
+.call_action {
+      margin-top: -2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      padding: 3rem 3rem;
+      border: $border;
+      background-image: url("../img/Abstract-2.png");
+      background-size: 200px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      background: linear-gradient(267deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0.00) 99.81%), url(<path-to-image>), lightgray 0% 0% / 62.46418356895447px 62.46418356895447px repeat, #1C1C1C;
+
+      .left_container {
+            width: 100%;
+            max-width: 1000px;
+
+            h1 {
+                  font-weight: 500;
+                  font-size: clamp(1.5rem, 2vw, 1.8rem);
+                  margin-bottom: 1rem;
+
+                  span {
+                        color: $accent-color;
+                  }
+            }
+      }
+
+      .primary_btn {
+            text-wrap: nowrap;
+      }
+
+      @media (max-width:800px) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 1.5rem;
+      }
+}
