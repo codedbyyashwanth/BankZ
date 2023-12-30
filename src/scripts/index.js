@@ -50,6 +50,22 @@ const featuredContent = document.querySelectorAll("[data-featured-content]");
 
 setUpTabs(featuredTabs, featuredContent, "featuredTab");
 
+// Testimonial Layout Logic
+const testimonialTabs = document.querySelectorAll("[data-testimonial-target]");
+const testimonialContent = document.querySelectorAll("[data-testimonial-content]");
+
+setUpTabs(testimonialTabs, testimonialContent, "testimonialTarget");
+
+
+const loadMore = document.getElementById("load_faq");
+const faqItems = document.querySelectorAll("[data-faq-extra]");
+const faqSpan = document.querySelectorAll("[data-span]");
+
+loadMore.addEventListener("click", () => {
+      faqItems.forEach(item => item.classList.toggle("active"));
+      faqSpan.forEach(item => item.classList.toggle("hide"));
+});
+
 const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
             // Code Here

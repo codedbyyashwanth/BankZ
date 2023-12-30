@@ -55,6 +55,7 @@ a {
       font-size: 0.9rem;
       border-radius: 30px;
       transition: ease 0.4s;
+      color: #fafafa;
 
       &:hover {
             background-color: $accent-color;
@@ -418,4 +419,24 @@ header {
 
 .active_tab[data-featured-content] {
       display: grid !important;
+}
+
+[data-testimonial-content] {
+      display: none;
+}
+
+.active_tab[data-testimonial-content] {
+      display: flex;
+}
+
+:root {
+      --swiper-pagination-color: #caff33;
+      --swiper-pagination-bullet-size: 10px;
+      --swiper-pagination-bullet-width: 10px;
+      --swiper-pagination-bullet-height: 10px;
+      --swiper-pagination-bullet-inactive-color: #262626;
+      --swiper-pagination-bullet-inactive-opacity: 1;
+      --swiper-pagination-bullet-opacity: 1;
+      --swiper-pagination-bullet-horizontal-gap: 4px;
+      --swiper-pagination-bullet-vertical-gap: 6px;
 }
