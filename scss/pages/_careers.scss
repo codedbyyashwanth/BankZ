@@ -162,7 +162,7 @@
             gap: 20px;
 
             .items {
-                  padding: 3rem 1.6rem !important;
+                  padding: 1.6rem !important;
             }
       }
 
@@ -232,5 +232,80 @@
             border-radius: 20px;
             border-bottom-left-radius: 50px;
             border-top-right-radius: 50px;
+      }
+}
+
+
+.career_main .offering_section {
+      .offerings_container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 3rem;
+
+            @media (max-width:750px) {
+                  grid-template-columns: 1fr;
+                  gap: 20px;
+
+                  .items {
+                        padding: 1.6rem 1rem !important;
+
+                        .tags {
+                              p {
+                                    margin-bottom: 10px !important;
+                              }
+                        }
+                  }
+            }
+
+            .items {
+                  padding: 3rem 2.6rem;
+                  border-radius: 20px;
+                  background-color: $secondary-color;
+
+                  h3 {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                  }
+
+                  .tags {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 1rem 0 2rem 0;
+
+                        p {
+                              padding: 5px 14px;
+                              border: $border;
+                              border-radius: 30px;
+                              background-color: $primary-color;
+                              margin: 0 20px 0 0;
+                              font-size: 0.8rem !important;
+                        }
+                  }
+
+                  h4 {
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                  }
+
+                  .lists {
+                        .item {
+                              display: flex;
+
+                              span {
+                                    margin-right: 10px;
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+
+.career_main .call_action {
+      .left_container {
+            max-width: 1000px !important;
       }
 }
