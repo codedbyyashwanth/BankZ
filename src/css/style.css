@@ -1055,7 +1055,7 @@ header .hero_container .right_container img {
 .careers_header .careers_hero {
   width: 100%;
   height: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -1122,4 +1122,132 @@ header .hero_container .right_container img {
 }
 .careers_header .img_container .pattern_img img {
   width: 200px;
+}
+
+.career_main section .left_container {
+  width: 100%;
+  max-width: 1200px !important;
+}
+
+.career_main > .our_values_section .values_container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+@media (max-width: 750px) {
+  .career_main > .our_values_section .values_container {
+    grid-template-columns: 1fr;
+  }
+}
+.career_main > .our_values_section .values_container .items {
+  position: relative;
+  padding: 8px 1.6rem;
+  z-index: 1;
+  transition: ease 0.6s;
+}
+.career_main > .our_values_section .values_container .items h1 {
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+.career_main > .our_values_section .values_container .items p {
+  margin-top: 1rem;
+}
+.career_main > .our_values_section .values_container .items:hover {
+  color: #191919;
+  cursor: pointer;
+}
+.career_main > .our_values_section .values_container .items:hover p {
+  color: #191919;
+}
+.career_main > .our_values_section .values_container .items:hover::before {
+  width: 100%;
+  cursor: none;
+}
+.career_main > .our_values_section .values_container .items::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 90%;
+  background-color: #caff33;
+  transition: ease 0.6s;
+}
+
+.career_main .benefits_container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+@media (max-width: 750px) {
+  .career_main .benefits_container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .career_main .benefits_container .items {
+    padding: 3rem 1.6rem !important;
+  }
+}
+.career_main .benefits_container .items {
+  padding: 3rem;
+  background-color: #1c1c1c;
+  border: 1px solid rgba(202, 255, 51, 0.1);
+  background: linear-gradient(to right bottom, rgba(202, 255, 51, 0.1), #1c1c1c 20%);
+}
+.career_main .benefits_container .items .benefits_head {
+  display: flex;
+  align-items: center;
+}
+.career_main .benefits_container .items .benefits_head h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+@media (max-width: 500px) {
+  .career_main .benefits_container .items .benefits_head h4 {
+    width: 70%;
+  }
+}
+.career_main .benefits_container .items .benefits_head .icon_container {
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: 1rem 0;
+  border: 1px solid rgba(201, 255, 51, 0.1);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+  display: grid;
+  place-items: center;
+}
+.career_main .benefits_container .items .benefits_head .icon_container span {
+  color: #caff33;
+}
+.career_main .benefits_container .items .benefits_head .icon_container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(202, 255, 51, 0.2) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+}
+.career_main .benefits_container .items .text {
+  margin-top: 1rem;
+}
+.career_main .benefits_container .items:nth-child(1), .career_main .benefits_container .items:nth-child(4) {
+  border-radius: 20px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.career_main .benefits_container .items:nth-child(2), .career_main .benefits_container .items:nth-child(3) {
+  border-radius: 20px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
