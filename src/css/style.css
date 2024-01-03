@@ -1398,4 +1398,46 @@ header .hero_container .right_container img {
   .about_main > .mission_section .img_container {
     width: 100% !important;
   }
+}
+
+.about_main .press_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .about_main .press_container {
+    grid-template-columns: 1fr;
+  }
+  .about_main .press_container .items {
+    padding: 1rem !important;
+  }
+}
+.about_main .press_container .items {
+  padding: 2rem;
+  border: 1px solid rgba(197, 197, 197, 0.1);
+  border-radius: 20px;
+  background-color: #1c1c1c;
+}
+.about_main .press_container .items .img_container img {
+  width: 100%;
+}
+.about_main .press_container .items h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1.4rem 0 1rem 0;
+}
+.about_main .press_container .items .tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem 0;
+}
+.about_main .press_container .items .tags p {
+  padding: 5px 14px;
+  border: 1px solid rgba(197, 197, 197, 0.1);
+  border-radius: 30px;
+  background-color: #191919;
+  margin: 0 10px 0 0;
+  font-size: 0.8rem !important;
 }/*# sourceMappingURL=style.css.map */

@@ -111,3 +111,53 @@
             }
       }
 }
+
+
+.about_main  .press_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+
+            .items {
+                  padding: 1rem !important;
+            }
+      }
+
+      .items {
+            padding: 2rem;
+            border: $border;
+            border-radius: 20px;
+            background-color: $secondary-color;
+
+            .img_container {
+                  img {
+                        width: 100%;
+                  }
+            }
+
+            h3 {
+                  font-weight: 500;
+                  font-size: 1.2rem;
+                  margin: 1.4rem 0 1rem 0;
+            }
+
+            .tags {
+                  display: flex;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  margin: 1rem 0 1rem 0;
+
+                  p {
+                        padding: 5px 14px;
+                        border: $border;
+                        border-radius: 30px;
+                        background-color: $primary-color;
+                        margin: 0 10px 0 0;
+                        font-size: 0.8rem !important;
+                  }
+            }
+      }
+}
