@@ -161,3 +161,96 @@
             }
       }
 }
+
+
+.security_main .security_features{
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+      padding: 3rem;
+      border-radius: 30px;
+      background-color: $secondary-color;
+      // border: 1px solid rgba(202, 255, 51, 0.10);
+      background: linear-gradient(to right bottom, rgba($accent-color, 0.1), $secondary-color 20%);
+
+      @media (max-width:750px) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 !important;
+            background: none !important;
+
+            .items {
+                  padding: 1.6rem !important;
+            }
+      }
+
+      .items {
+            padding: 3rem;
+            background-color: $secondary-color;
+            border: 1px solid rgba(202, 255, 51, 0.10);
+            border-radius: 20px;
+            background: linear-gradient(to right bottom, rgba($accent-color, 0.1), $secondary-color 20%);
+
+            .benefits_head {
+                  display: flex;
+                  align-items: center;
+
+                  h4 {
+                        font-weight: 500;
+                        font-size: 1.3rem;
+                        margin-left: 2rem;
+
+                        @media (max-width:500px) {
+                              width: 70%;
+                        }
+                  }
+
+                  .icon_container {
+                        position: relative;
+                        z-index: 1;
+                        width: 50px;
+                        height: 50px;
+                        margin: 1rem 0;
+                        border: 1px solid rgba(201, 255, 51, 0.1);
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, rgba(202, 255, 51, 0.10) -66.22%, rgba(202, 255, 51, 0.00) 85.46%);
+                        display: grid;
+                        place-items: center;
+      
+                        span {
+                              color: $accent-color;
+                        }
+      
+                        &::after {
+                              content: '';
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                              width: 70px;
+                              height: 70px;     
+                              z-index: -1;
+                              border-radius: 50%;
+                              background: linear-gradient(180deg, rgba(202, 255, 51, 0.20) -66.22%, rgba(202, 255, 51, 0.00) 85.46%);
+                        }
+                  }
+            }
+
+            .text {
+                  margin-top: 1rem;
+            }
+      }
+
+      // .items:nth-child(1), .items:nth-child(4) {
+      //       border-radius: 20px;
+      //       border-top-left-radius: 50px;
+      //       border-bottom-right-radius: 50px;
+      // }
+
+      // .items:nth-child(2), .items:nth-child(3) {
+      //       border-radius: 20px;
+      //       border-bottom-left-radius: 50px;
+      //       border-top-right-radius: 50px;
+      // }
+}
